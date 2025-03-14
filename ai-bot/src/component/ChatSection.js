@@ -8,7 +8,6 @@ const ChatSection = (props) => {
   const { chatId, title } = props;
   const [message, setMessage] = useState("");
   const [chatMessages, setChatMessages] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const chatContainerRef = useRef(null);
   const socketRef = useRef(null);
 
@@ -137,7 +136,6 @@ const ChatSection = (props) => {
             </div>
           )
         )}
-        {isLoading && <div>Loading...</div>}
       </div>
 
       <footer className="border-t h-[15%] rounded-xl bg-white mx-16 border-gray-100 shadow-xl p-4 flex items-center">
